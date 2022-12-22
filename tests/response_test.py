@@ -14,11 +14,11 @@ config = {
 
 def test_response():
     try:
-        bot = Chatbot(config=config, debug=True)
+        bot = Chatbot(config=config, debug=False)
 
         bot.refresh_session()
 
-        response = bot.get_chat_response("Hello")
+        response = bot.get_chat_response("Hi")
 
         if response['message'] is None:
             print("Error: response['message'] is None")
